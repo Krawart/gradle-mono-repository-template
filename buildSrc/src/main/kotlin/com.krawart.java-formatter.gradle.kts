@@ -8,6 +8,7 @@ configure<SpotlessExtension> {
 
     java {
         target("**/*.java")
+        removeUnusedImports()
         prettier(
             mapOf(
                 "prettier" to "2.8.8",

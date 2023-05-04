@@ -23,10 +23,10 @@ Find `build.gradle.kts` file in root of project and click `Open as Project`
 
 ### Formatter configuration
 
-To use Prettier formatter in IntelliJ IDEA
+To use Prettier formatter in IntelliJ IDEA, follow these steps:
 
-> __INFO__: Point 2-4 are optional. Gradle spotless apply pulls prettier by himself so after first spotlessApply run,
-> you can locate prettier, inside build folder of particular module using spotless
+> __WARNING__: This configuration is only for local development. Formatting will be checked by CI/CD pipeline, so it
+> is important to NOT change formatting configuration locally!
 
 1. Install node.js and npm [link](https://nodejs.org/en/download/ "Node.js download page")
 2. Install prettier plugin for IntelliJ IDEA
@@ -38,4 +38,5 @@ To use Prettier formatter in IntelliJ IDEA
 
 This way you can use Prettier formatter in IntelliJ IDEA also for java files.
 
-> __NOTE__: You can perform gradle task `spotlesApply` to apply Prettier formatter to all files in project.
+> __NOTE__: You can perform gradle task `spotlesApply` to apply Prettier formatter to all files in project. It is
+> preferred to use this task before committing changes to repository.
